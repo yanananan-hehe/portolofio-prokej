@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<title>Data Proyek</title>
+</head>
+<body>
+
+<div class="container">
+<h2>Daftar Proyek Siswa</h2>
+
+<table>
+<tr>
+<th>Nama Proyek</th>
+<th>Skill</th>
+<th>Deskripsi</th>
+<th>Aksi</th>
+</tr>
+
+{% for id,p,s,d in rows %}
+<tr>
+<td>{{ p }}</td>
+<td>{{ s }}</td>
+<td>{{ d }}</td>
+<td>
+    <a href="/edit/{{ id }}"><button>Edit</button></a>
+    <a href="/delete/{{ id }}">
+    <button>Hapus</button>
+    </a>
+</td>
+</tr>
+{% endfor %}
+</table>
+
+<a href="/">Kembali ke Home</a>
+</div>
+
+</body>
+</html>

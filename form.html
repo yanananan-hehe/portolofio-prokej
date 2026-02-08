@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<title>Form Proyek</title>
+</head>
+<body>
+
+<div class="container">
+<h2>Input Proyek Siswa</h2>
+
+<form method="post">
+
+<label>Nama Proyek</label>
+<input name="project" placeholder="Contoh: Website Portofolio">
+
+<label>Skill yang Digunakan</label>
+<input name="skill" placeholder="HTML, CSS, Python, Flask">
+
+<label>Deskripsi Proyek</label>
+<textarea name="deskripsi" rows="4" placeholder="Jelaskan tujuan dan fungsi proyek"></textarea>
+
+<button>Simpan Proyek</button>
+</form>
+
+<a href="/">Kembali ke Home</a>
+</div>
+
+</body>
+</html>
